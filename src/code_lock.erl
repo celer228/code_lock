@@ -98,7 +98,7 @@ handle_event(cast, {button,LockButton}, {suspended,LockButton}, Data) ->
     {next_state, {locked,LockButton}, Data};
 handle_event(cast, {button,_}, {suspended,_}, _Data) ->
     error(),
-    keep_state_and_data;
+    {keep_state_and_data, []};
 %%
 %% Common events
 handle_event(
