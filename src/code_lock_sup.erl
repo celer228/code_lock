@@ -30,7 +30,7 @@ init([]) ->
                  intensity => 0,
                  period => 1},
     ChildSpecs = [{code_lock, {code_lock, start_link, [[1,2,3], lock]},
-                   permanent, 5000, worker, [iotserv]}],
+                   permanent, 5000, worker, [code_lock]}],
     {ok, {SupFlags, ChildSpecs}}.
 
 %% internal functions
